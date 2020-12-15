@@ -18,14 +18,14 @@ class Waiter
   end
 
   def new_meal(customer, total, tip)
-    meal = Meal.new(self, customer, total, tip)
+    Meal.new(self, customer, total, tip)
   end
 
   def meals
-    Meal.all
+    Meal.all.select { |meal| meal.customerr == self }
   end
 
   def best_tipper
-
+    Customer.all {}
   end
 end
