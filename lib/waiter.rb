@@ -22,10 +22,10 @@ class Waiter
   end
 
   def meals
-    Meal.all.select { |meal| meal.customerr == self }
+    Meal.all.select { |meal| meal.customer == self }
   end
 
   def best_tipper
-    Customer.all {}
+    Customer.all { |meal| meal.tip.max(1) }
   end
 end
