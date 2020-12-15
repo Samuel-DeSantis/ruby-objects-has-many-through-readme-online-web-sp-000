@@ -23,7 +23,7 @@ class Customer
   end
 
   def meals
-    Meal.all
+    Meal.all { |meal| meal.name == @name }
   end
 
   def watiers
