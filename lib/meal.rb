@@ -14,4 +14,8 @@ class Meal
   def save
     @@all << self
   end
+
+  def all
+    @@all
+  end
 end
