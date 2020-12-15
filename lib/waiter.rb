@@ -16,4 +16,16 @@ class Waiter
   def self.all
     @@all
   end
+
+  def new_meal
+    meal = Meal.new()
+  end
+
+  def meals
+    Meal.all
+  end
+
+  def best_tipper
+
+  end
 end
